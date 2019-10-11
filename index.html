@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="color.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        //$("button").click(function(){
+        //    div = document.createElement('div');
+        //    $(div).addClass("inner").html("new inner div");
+        //    $("#colorbg").append(div);
+        //});
+        
+       /* var $newDiv = $("<div/>")   // creates a div element
+                 //.attr("id", "someID")  // adds the id
+                 .addClass("red")  // add a class
+                 .html("<div>stuff here</div>");
+        
+        $("button").click(function(){
+            $("#colorbg").append("$newDiv");
+        });*/
+        
+        $(function() {
+            $('.redbtn').on('click', function() {
+                var $red = $('.red');
+                $("#colorbg").prepend('<div id="id' + ($red.length + 1) + '" class="red"></div>');
+
+            });
+        });
+        
+        $(function() {
+            $('.greenbtn').on('click', function() {
+                var $green = $('.green');
+                $("#colorbg").prepend('<div id="id' + ($green.length + 1) + '" class="green"></div>');
+
+            });
+        });
+        
+        
+        $(function() {
+            $('.bluebtn').on('click', function() {
+                var $blue = $('.blue');
+                $("#colorbg").prepend('<div id="id' + ($blue.length + 1) + '" class="blue"></div>');
+
+            });
+        });
+        
+        
+        //CLEAR BG COLORS CYCLE
+        /*
+        function colorRemoveCycle() {
+            $(.red).remove;
+            $(.green).remove;
+            $(.blue).remove;
+        }*/
+
+        var interval = setInterval(colorRemoveCylce,5000);
+        
+        /*$("button").click(function(){
+            div = document.createElement('div');
+            $(div).addClass("red");
+            $("#colorbg").append(div);
+        })*/
+    
+    </script>
+</head>
+<body>
+    <audio id="homedoor" src="sounds/HomeDoor.wav"></audio>
+    <audio id="anhoyt" src="sounds/20191001_095845_Concert.wav"></audio>
+    <audio id="anfulton" src="sounds/announcementfulton.wav"></audio>
+    <audio id="anclinton" src="sounds/announementclinton.wav"></audio>
+    <audio id="officerevolve" src="sounds/OfficeRevolving.wav"></audio>
+    <audio id="officeswipe" src="sounds/OfficeSwipeIn.wav"></audio>
+    <audio id="subway2" src="sounds/Subway2.wav"></audio>
+    <audio id="subway3" src="sounds/Subway3.wav"></audio>
+    <audio id="subway4" src="sounds/Subway4.wav"></audio>
+    <audio id="subway5" src="sounds/Subway5.wav"></audio>
+    <audio id="subway6" src="sounds/Subway6.wav"></audio>
+    <audio id="subway7" src="sounds/Subway7.wav"></audio>
+    <audio id="subway8" src="sounds/Subway8.wav"></audio>
+    <audio id="subway9" src="sounds/Subway9.wav"></audio>
+    <audio id="subwayhigh1" src="sounds/SubwayHightoFulton1.wav"></audio>
+    <audio id="subwayhigh2" src="sounds/SubwayHightoFulton2.wav"></audio>
+    <audio id="turnstyle" src="sounds/Turnstyle.wav"></audio>
+    
+    <div id="buttons">
+        <button class="redbtn" onclick="document.getElementById('homedoor').play()">Play</button>
+        <button class="greenbtn" onclick="document.getElementById('anfulton').play()">Play</button>
+        <button class="bluebtn" onclick="document.getElementById('anclinton').play()">Play</button>
+        <button class="redbtn" onclick="document.getElementById('officerevolve').play()">Play</button>
+        <button class="greenbtn" onclick="document.getElementById('officeswipe').play()">Play</button>
+        <button class="bluebtn" onclick="document.getElementById('subway2').play()">Play</button>
+        <button class="redbtn" onclick="document.getElementById('subway3').play()">Play</button>
+        <button class="greenbtn" onclick="document.getElementById('subway4').play()">Play</button>
+        <button class="bluebtn" onclick="document.getElementById('subway5').play()">Play</button>
+        <button class="redbtn" onclick="document.getElementById('subway6').play()">Play</button>
+        <button class="greenbtn" onclick="document.getElementById('subway7').play()">Play</button>
+        <button class="bluebtn" onclick="document.getElementById('subway8').play()">Play</button>
+        <button class="redbtn" onclick="document.getElementById('subway9').play()">Play</button>
+        <button class="greenbtn" onclick="document.getElementById('subwayhigh1').play()">Play</button>
+        <button class="bluebtn" onclick="document.getElementById('subwayhigh2').play()">Play </button>
+        <button class="redbtn" onclick="document.getElementById('turnstyle').play()">Play</button>
+        <button class="greenbtn" onclick="document.getElementById('anhoyt').play()">Play</button>
+    </div>
+    <!--<div id="bgtext">
+        <h1>THE COMMUTE</h1>
+    </div>-->
+    <div id="colorbg">
+    
+    </div>
+</body>
